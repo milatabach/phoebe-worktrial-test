@@ -492,3 +492,18 @@ footer {
   .bin-btn { font-size: 1.15rem; }
   .bin-converter { width: 290px; }
 }
+
+/* ── Rocket SVG scene ────────────────────────────────────────────── */
+.rocket-scene {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.rocket-scene svg {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 4px 24px rgba(79, 70, 229, 0.18);
+}
