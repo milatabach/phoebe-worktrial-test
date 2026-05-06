@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — Mabel Test Repo</title>
+  <meta name="description" content="A clean, fully-functional calculator built with HTML, CSS, and JavaScript.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html">Mabel Test Repo</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="calculator.html" class="active">Calculator</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Calculator</h1>
+    <p class="subtitle">A clean, fully-functional standard calculator.</p>
+  </header>
+
+  <main>
+    <div class="calc-wrapper">
+      <div class="calc" role="application" aria-label="Calculator">
+
+        <!-- Display -->
+        <div class="calc-display">
+          <div class="calc-expression" id="calc-expression" aria-live="polite"></div>
+          <div class="calc-screen"     id="calc-screen"     aria-live="assertive" aria-atomic="true">0</div>
+        </div>
+
+        <!-- Button grid -->
+        <div class="calc-grid" id="calc-grid">
+
+          <!-- Row 1 -->
+          <button class="calc-btn btn-secondary" data-action="clear"   aria-label="All clear">AC</button>
+          <button class="calc-btn btn-secondary" data-action="sign"    aria-label="Toggle sign">+/−</button>
+          <button class="calc-btn btn-secondary" data-action="percent" aria-label="Percent">%</button>
+          <button class="calc-btn btn-operator"  data-action="op" data-op="÷" aria-label="Divide">÷</button>
+
+          <!-- Row 2 -->
+          <button class="calc-btn" data-action="digit" data-digit="7">7</button>
+          <button class="calc-btn" data-action="digit" data-digit="8">8</button>
+          <button class="calc-btn" data-action="digit" data-digit="9">9</button>
+          <button class="calc-btn btn-operator" data-action="op" data-op="×" aria-label="Multiply">×</button>
+
+          <!-- Row 3 -->
+          <button class="calc-btn" data-action="digit" data-digit="4">4</button>
+          <button class="calc-btn" data-action="digit" data-digit="5">5</button>
+          <button class="calc-btn" data-action="digit" data-digit="6">6</button>
+          <button class="calc-btn btn-operator" data-action="op" data-op="−" aria-label="Subtract">−</button>
+
+          <!-- Row 4 -->
+          <button class="calc-btn" data-action="digit" data-digit="1">1</button>
+          <button class="calc-btn" data-action="digit" data-digit="2">2</button>
+          <button class="calc-btn" data-action="digit" data-digit="3">3</button>
+          <button class="calc-btn btn-operator" data-action="op" data-op="+" aria-label="Add">+</button>
+
+          <!-- Row 5 -->
+          <button class="calc-btn btn-zero" data-action="digit" data-digit="0" aria-label="Zero">0</button>
+          <button class="calc-btn" data-action="decimal" aria-label="Decimal point">.</button>
+          <button class="calc-btn btn-accent" data-action="equals" aria-label="Equals">=</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Mabel Test Repo</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>
