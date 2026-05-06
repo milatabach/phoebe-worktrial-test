@@ -13,7 +13,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Calibri", "Candara", "Segoe UI", "Optima", sans-serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
