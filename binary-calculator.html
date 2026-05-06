@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Calculator — Work Trial Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html">Work Trial Demo</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="binary-calculator.html" class="active">Binary Calc</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Binary Calculator</h1>
+    <p class="subtitle">Perform arithmetic in binary — results shown in both binary and decimal.</p>
+  </header>
+
+  <main>
+    <section class="bin-calc-wrapper">
+      <div class="bin-calc" role="application" aria-label="Binary Calculator">
+
+        <!-- Display -->
+        <div class="bin-display" aria-live="polite" aria-atomic="true">
+          <div class="bin-expression" id="bin-expression">&nbsp;</div>
+          <div class="bin-screen"     id="bin-screen">0</div>
+          <div class="bin-decimal"    id="bin-decimal">decimal: 0</div>
+        </div>
+
+        <!-- Button grid -->
+        <div class="bin-grid">
+          <!-- Row 1: utility -->
+          <button class="bin-btn btn-secondary" data-action="clear"    aria-label="Clear">AC</button>
+          <button class="bin-btn btn-secondary" data-action="sign"     aria-label="Toggle sign">+/−</button>
+          <button class="bin-btn btn-secondary" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="bin-btn btn-operator"  data-action="operator" data-value="÷" aria-label="Divide">÷</button>
+
+          <!-- Row 2 -->
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-operator" data-action="operator" data-value="×" aria-label="Multiply">×</button>
+
+          <!-- Row 3 -->
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-operator" data-action="operator" data-value="−" aria-label="Subtract">−</button>
+
+          <!-- Row 4: only binary digits -->
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-disabled" disabled aria-hidden="true">—</button>
+          <button class="bin-btn btn-operator" data-action="operator" data-value="+" aria-label="Add">+</button>
+
+          <!-- Row 5 -->
+          <button class="bin-btn bin-btn-zero" data-action="digit" data-value="0">0</button>
+          <button class="bin-btn" data-action="digit" data-value="1">1</button>
+          <button class="bin-btn btn-accent"   data-action="equals" aria-label="Equals">=</button>
+        </div>
+
+      </div>
+
+      <!-- Conversion panel -->
+      <div class="bin-converter">
+        <h2>Base Converter</h2>
+        <p class="converter-hint">Type in any field to convert instantly.</p>
+
+        <div class="conv-row">
+          <label for="conv-bin">Binary (base 2)</label>
+          <input id="conv-bin" type="text" inputmode="text"
+                 placeholder="e.g. 1010" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="conv-row">
+          <label for="conv-dec">Decimal (base 10)</label>
+          <input id="conv-dec" type="text" inputmode="numeric"
+                 placeholder="e.g. 10" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="conv-row">
+          <label for="conv-hex">Hexadecimal (base 16)</label>
+          <input id="conv-hex" type="text" inputmode="text"
+                 placeholder="e.g. A" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="conv-row">
+          <label for="conv-oct">Octal (base 8)</label>
+          <input id="conv-oct" type="text" inputmode="numeric"
+                 placeholder="e.g. 12" autocomplete="off" spellcheck="false">
+        </div>
+        <p class="conv-error" id="conv-error" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Work Trial Demo</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="binary-calculator.js"></script>
+</body>
+</html>

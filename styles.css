@@ -285,3 +285,210 @@ footer {
   .calc-screen { font-size: 2.4rem; }
   .calc-btn { font-size: 1.15rem; }
 }
+
+
+/* ── Binary Calculator ───────────────────────────────────────────── */
+.bin-calc-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0 2rem;
+}
+
+/* ── Binary Calculator keypad ─────────────────────────────────────── */
+.bin-calc {
+  background: #1c1c1e;
+  border-radius: 20px;
+  padding: 1.25rem;
+  width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+/* Display */
+.bin-display {
+  text-align: right;
+  padding: 0.5rem 0.75rem 0.75rem;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.bin-expression {
+  font-size: 0.85rem;
+  color: #8e8e93;
+  min-height: 1.2em;
+  word-break: break-all;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.bin-screen {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  word-break: break-all;
+  font-family: "Courier New", Courier, monospace;
+  transition: font-size 0.1s;
+}
+.bin-screen.small { font-size: 1.6rem; }
+
+.bin-decimal {
+  font-size: 0.8rem;
+  color: #636366;
+  min-height: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Button grid */
+.bin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+
+/* Base button */
+.bin-btn {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.35rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: filter 0.1s, transform 0.08s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #3a3a3c;
+  color: #ffffff;
+  line-height: 1;
+}
+.bin-btn:hover  { filter: brightness(1.2); opacity: 1; }
+.bin-btn:active { transform: scale(0.93); filter: brightness(0.85); opacity: 1; }
+
+/* Secondary (AC, +/−, ⌫) */
+.bin-btn.btn-secondary {
+  background: #636366;
+  color: #000000;
+}
+
+/* Operator column */
+.bin-btn.btn-operator {
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/* Equals */
+.bin-btn.btn-accent {
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+/* Disabled (non-binary digits greyed out) */
+.bin-btn.btn-disabled {
+  background: #2c2c2e;
+  color: #48484a;
+  cursor: not-allowed;
+  font-size: 1rem;
+}
+.bin-btn.btn-disabled:hover { filter: none; }
+
+/* Wide "0" button spans 2 columns */
+.bin-btn.bin-btn-zero {
+  grid-column: span 2;
+  aspect-ratio: unset;
+  border-radius: 40px;
+  justify-content: flex-start;
+  padding-left: 1.35rem;
+  font-size: 1.35rem;
+}
+
+/* Active operator highlight */
+.bin-btn.btn-operator.active-op {
+  background: #ffffff;
+  color: var(--accent);
+}
+
+/* ── Base Converter panel ─────────────────────────────────────────── */
+.bin-converter {
+  background: #f3f4f6;
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  width: 280px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.bin-converter h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: var(--fg);
+}
+
+.converter-hint {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.conv-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 0.85rem;
+}
+
+.conv-row label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.conv-row input {
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--fg);
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.conv-row input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.conv-error {
+  font-size: 0.8rem;
+  color: #dc2626;
+  min-height: 1.2em;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .bin-calc-wrapper { flex-direction: column; align-items: center; }
+  .bin-converter { width: 320px; }
+}
+
+@media (max-width: 380px) {
+  .bin-calc { width: 290px; padding: 1rem; }
+  .bin-grid { gap: 9px; }
+  .bin-screen { font-size: 2rem; }
+  .bin-btn { font-size: 1.15rem; }
+  .bin-converter { width: 290px; }
+}
