@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — Work Trial Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html">Work Trial Demo</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="calculator.html" class="active">Calculator</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Calculator</h1>
+    <p class="subtitle">A simple four-function calculator.</p>
+  </header>
+
+  <main>
+    <section class="calc-wrapper">
+      <div class="calc" role="application" aria-label="Calculator">
+
+        <!-- Display -->
+        <div class="calc-display" aria-live="polite" aria-atomic="true">
+          <div class="calc-expression" id="calc-expression">&nbsp;</div>
+          <div class="calc-screen"    id="calc-screen">0</div>
+        </div>
+
+        <!-- Button grid -->
+        <div class="calc-grid">
+          <!-- Row 1 -->
+          <button class="calc-btn btn-secondary" data-action="clear"    aria-label="Clear">AC</button>
+          <button class="calc-btn btn-secondary" data-action="sign"     aria-label="Toggle sign">+/−</button>
+          <button class="calc-btn btn-secondary" data-action="percent"  aria-label="Percent">%</button>
+          <button class="calc-btn btn-operator"  data-action="operator" data-value="÷" aria-label="Divide">÷</button>
+
+          <!-- Row 2 -->
+          <button class="calc-btn" data-action="digit" data-value="7">7</button>
+          <button class="calc-btn" data-action="digit" data-value="8">8</button>
+          <button class="calc-btn" data-action="digit" data-value="9">9</button>
+          <button class="calc-btn btn-operator" data-action="operator" data-value="×" aria-label="Multiply">×</button>
+
+          <!-- Row 3 -->
+          <button class="calc-btn" data-action="digit" data-value="4">4</button>
+          <button class="calc-btn" data-action="digit" data-value="5">5</button>
+          <button class="calc-btn" data-action="digit" data-value="6">6</button>
+          <button class="calc-btn btn-operator" data-action="operator" data-value="−" aria-label="Subtract">−</button>
+
+          <!-- Row 4 -->
+          <button class="calc-btn" data-action="digit" data-value="1">1</button>
+          <button class="calc-btn" data-action="digit" data-value="2">2</button>
+          <button class="calc-btn" data-action="digit" data-value="3">3</button>
+          <button class="calc-btn btn-operator" data-action="operator" data-value="+" aria-label="Add">+</button>
+
+          <!-- Row 5 -->
+          <button class="calc-btn btn-zero" data-action="digit" data-value="0">0</button>
+          <button class="calc-btn" data-action="decimal" aria-label="Decimal point">.</button>
+          <button class="calc-btn btn-accent" data-action="equals" aria-label="Equals">=</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Work Trial Demo</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>
