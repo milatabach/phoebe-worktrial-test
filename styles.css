@@ -3,10 +3,10 @@
   --fg: #1f2330;
   --accent: #4f46e5;
   --muted: #6b7280;
-  --nav-bg: #1d4ed8;
-  --nav-fg: #ffffff;
-  --nav-active: #818cf8;
-  --nav-hover: #818cf8;
+  --nav-bg: #eab308;
+  --nav-fg: #1f2330;
+  --nav-active: #713f12;
+  --nav-hover: #713f12;
 }
 
 * { box-sizing: border-box; }
@@ -65,7 +65,7 @@ body {
   text-decoration: none;
 }
 .nav-links a.active {
-  background: rgba(129, 140, 248, 0.2);
+  background: rgba(113, 63, 18, 0.15);
   color: var(--nav-active);
   font-weight: 600;
 }
