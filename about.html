@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Mabel Playground</title>
+  <title>About — Mabel Test Repo</title>
+  <meta name="description" content="About this test repository for Mabel, a background coding agent that runs in a disposable sandbox.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <nav class="navbar">
-    <a class="nav-brand" href="index.html">Mabel Playground</a>
+    <a class="nav-brand" href="index.html">Mabel Test Repo</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span>
       <span></span>
@@ -19,33 +20,40 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
-      <li><a href="calculator.html">Calculator</a></li>
     </ul>
   </nav>
 
   <header>
     <h1>About</h1>
-    <p class="subtitle">A bit more context about this demo.</p>
+    <p class="subtitle">What this repo is and why it exists.</p>
   </header>
 
   <main>
     <section>
+      <h2>About Mabel</h2>
       <p>
-        This page is part of the same little site as the
-        <a href="index.html">home page</a>. It exists to demonstrate
-        internal linking between two HTML files in the same folder.
+        <strong>Mabel</strong> is a background coding agent that runs in a disposable sandbox.
+        It can read a codebase, understand context, and make targeted changes — all without
+        a human sitting in the loop for every step.
+      </p>
+    </section>
+
+    <section>
+      <h2>About this repo</h2>
+      <p>
+        This repository exists purely as a test target for Mabel. It's a simple static site
+        with enough structure — multiple pages, a stylesheet, and a script — to meaningfully
+        exercise Mabel's ability to navigate and edit a real codebase.
       </p>
     </section>
 
     <section>
       <h2>Files in this project</h2>
       <ul>
-        <li><a href="index.html">index.html</a> — the main page</li>
+        <li><a href="index.html">index.html</a> — home page</li>
         <li><a href="about.html">about.html</a> — this page</li>
-        <li><a href="calculator.html">calculator.html</a> — calculator page</li>
         <li><a href="styles.css">styles.css</a> — shared stylesheet</li>
         <li><a href="script.js">script.js</a> — small script</li>
-        <li><a href="calculator.js">calculator.js</a> — calculator logic</li>
       </ul>
     </section>
 
@@ -53,7 +61,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Mabel Playground</p>
+    <p>&copy; <span id="year"></span> Mabel Test Repo</p>
   </footer>
 
   <script src="script.js"></script>
