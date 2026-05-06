@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background circle in the site's pink navbar colour -->
+  <circle cx="16" cy="16" r="16" fill="#ffb6c1"/>
+  <!-- Letter "M" in the site's indigo accent colour -->
+  <text
+    x="16"
+    y="22"
+    text-anchor="middle"
+    font-family="Calibri, Candara, Segoe UI, Optima, sans-serif"
+    font-size="20"
+    font-weight="700"
+    fill="#4f46e5"
+  >M</text>
+</svg>
